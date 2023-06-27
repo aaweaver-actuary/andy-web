@@ -1,0 +1,73 @@
+/* LANDING PAGE */
+
+/** LANDING PAGE HEADER */
+h1.leave-home {
+  animation: leave-home 0.5s ease-in-out alternate forwards;
+}
+@keyframes leave-home {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.25;
+    translate: -25% -135%;
+  }
+}
+
+h1.return-home {
+  animation: return-home 0.5s ease-in-out alternate forwards;
+}
+@keyframes return-home {
+  0% {
+    scale: 0.25;
+    translate: -25% -135%;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* SUBHEADING */
+h2.fade-in {
+  color: black;
+  animation: fade-in 0.5s ease-in-out alternate forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    color: rgb(var(--background-start-rgb));
+  }
+  100% {
+    opacity: 1;
+    color: rgb(var(--foreground-rgb));
+  }
+}
+
+h2.fade-out {
+  color: rgb(var(--background-start-rgb));
+  animation: fade-out 0.5s ease-in-out alternate forwards;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    color: rgb(var(--foreground-rgb));
+  }
+  100% {
+    opacity: 0;
+    color: rgb(var(--background-start-rgb));
+  }
+}
+
+/** LANDING PAGE BUTTONS */
+.nav-not-landing {
+  animation: bottom-to-top 0.5s ease-in-out alternate
+    forwards;
+}
+@keyframes bottom-to-top {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 6vw -67vh;
+  }
+}

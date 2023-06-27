@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+@import url('./styles/animation.styles.css');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: 'Ubuntu Mono', monospace;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +29,44 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+header {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+h2.pre-fade-in {
+  transition: color 0.5s ease-in-out;
+}
+
+h2.pre-fade-out {
+  transition: color 0.5s ease-in-out;
+}
+
+button {
+  font-family: 'Ubuntu Mono', monospace;
+  border: 2px solid rgb(var(--foreground-rgb));
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  transition: transform 0.2s linear;
+}
+
+button.nav-landing {
+  padding: 0.5rem 1rem;
+}
+
+button.nav-not-landing {
+  padding: 0.3rem 0.7rem;
+}
+
+button:hover {
+  background-color: black;
+  color: rgb(var(--background-start-rgb));
+  transform: scale(1.1);
+}
+
+button.nav-toggled {
+  background-color: black;
+  color: rgb(var(--background-start-rgb));
 }
