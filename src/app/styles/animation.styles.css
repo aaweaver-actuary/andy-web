@@ -10,7 +10,7 @@ h1.leave-home {
   }
   100% {
     scale: 0.25;
-    translate: -25% -135%;
+    translate: -30% -130%;
   }
 }
 
@@ -20,7 +20,7 @@ h1.return-home {
 @keyframes return-home {
   0% {
     scale: 0.25;
-    translate: -25% -135%;
+    translate: -30% -130%;
   }
   100% {
     scale: 1;
@@ -68,6 +68,20 @@ h2.fade-out {
     translate: 0;
   }
   100% {
-    translate: 6vw -67vh;
+    translate: 6vw -65.5vh;
+  }
+}
+
+.nav-landing {
+  animation: top-to-bottom 0.5s ease-in-out alternate
+    forwards;
+}
+
+@keyframes top-to-bottom {
+  0% {
+    translate: 6vw -65.5vh;
+  }
+  100% {
+    translate: 0;
   }
 }

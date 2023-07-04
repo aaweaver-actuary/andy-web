@@ -3,9 +3,22 @@
 import propTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const Header = ({ isLandingPage, isFirstRender }) => {
+import HeaderCursor from './HeaderCursor.component';
+
+const Header = ({
+  isLandingPage,
+  isFirstRender,
+  setIsLandingPage,
+  setToggledButton,
+}) => {
   const [showSection, setShowSection] = useState(true);
   const [isCursorBlack, setIsCursorBlack] = useState(true);
+
+  const handleHeaderClick = () => {
+    if (isLandingPage) return;
+    setIsLandingPage(true);
+    setToggledButton(null);
+  };
 
   useEffect(() => {
     // toggle isCursorBlack every 0.7s
@@ -17,7 +30,12 @@ const Header = ({ isLandingPage, isFirstRender }) => {
     return () => clearInterval(timer);
   }, []);
 
+  // when isLandingPage changes
   useEffect(() => {
+    if (!isLandingPage) {
+      setIsCursorBlack(true);
+    }
+
     const timer = setTimeout(() => {
       setShowSection(isLandingPage);
     }, 50);
@@ -39,32 +57,24 @@ const Header = ({ isLandingPage, isFirstRender }) => {
               ? isFirstRender
                 ? ''
                 : 'return-home'
-              : ' leave-home'
+              : 'leave-home'
           }`}
+          onClick={() => handleHeaderClick()}
         >
           .andy-weaver
         </h1>
-        <div
-          id="header-cursor"
-          className={`${
-            isCursorBlack
-              ? 'bg-black'
-              : 'bg-[rgb(214, 219, 220)]'
-          }
-            ${
-              isLandingPage
-                ? 'z-[100] w-[90px] h-[200px] mt-[-80px]'
-                : 'opacity-0 bg-[rgb(214, 219, 220)]'
-            }
-            `}
-        ></div>
+        <HeaderCursor
+          isCursorBlack={isCursorBlack}
+          setIsCursorBlack={setIsCursorBlack}
+          isLandingPage={isLandingPage}
+        />
       </div>
       {showSection && (
         <section
           id="subheader"
           className={`flex flex-row justify-center pl-2 pr-2 text-[20px] ${
             isLandingPage
-              ? 'pre-fade-out'
+              ? 'pre-fade-out fade-in'
               : 'fade-out pre-fade-in'
           }'`}
         >
@@ -85,6 +95,8 @@ const Header = ({ isLandingPage, isFirstRender }) => {
 
 Header.propTypes = {
   isLandingPage: propTypes.bool.isRequired,
+  isFirstRender: propTypes.bool.isRequired,
+  setIsLandingPage: propTypes.func.isRequired,
 };
 
 export default Header;
