@@ -14,7 +14,7 @@ const navItems = [
 const Layout = ({ children }) => {
   return (
     <div className="w-[100vw] h-[100vh] flex flex-col mb-5">
-      <header className="flex flex-row mb-0 pt-4 border-b-black border-b-2 top-0 h-[75px]">
+      <header className="flex flex-row pb-2 pt-4 border-b-black border-b-2 top-0 h-[75px] ">
         <Link href="/" className="flex flex-col">
           <span className="mx-5 text-4xl w-fit hover:bg-black hover:text-white hover:scale-105 transition-all duration-200">
             <h2 className="px-2">.andy-weaver</h2>

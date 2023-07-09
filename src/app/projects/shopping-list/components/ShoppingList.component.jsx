@@ -40,7 +40,9 @@ const ShoppingList = ({
         .concat(item)
         .sort((a, b) => a.dateCreated - b.dateCreated),
     );
-    setActiveItems(activeItems.filter((item) => item.id !== id));
+    setActiveItems(
+      activeItems.filter((item) => item.id !== id),
+    );
     setCompletedItems(completedItems.concat(item));
   };
 
@@ -55,7 +57,9 @@ const ShoppingList = ({
         .sort((a, b) => a.dateCreated - b.dateCreated),
     );
     setActiveItems(activeItems.concat(item));
-    setCompletedItems(completedItems.filter((item) => item.id !== id));
+    setCompletedItems(
+      completedItems.filter((item) => item.id !== id),
+    );
   };
 
   const toggleModal = () => {
@@ -63,13 +67,17 @@ const ShoppingList = ({
   };
 
   return (
-    <div className="z-[1000] h-screen w-screen">
-      <h1 className="text-6xl font-bold mb-10 w-screen text-center">
+    <div className="z-[1000] h-screen w-screen pt-3">
+      <h1 className="text-6xl font-bold mb-10 w-screen text-center ubuntu">
         Shopping List
       </h1>
 
       <div className="grid grid-cols-3">
-        <InputForm handleSubmit={handleSubmit} text={text} setText={setText} />
+        <InputForm
+          handleSubmit={handleSubmit}
+          text={text}
+          setText={setText}
+        />
         <div className="flex flex-col text-center w-[95%] h-[95%] p-10 m-3">
           <ActiveItems
             activeItems={activeItems}

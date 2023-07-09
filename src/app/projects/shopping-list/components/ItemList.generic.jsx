@@ -10,14 +10,18 @@ const ItemList = ({
 }) => {
   return (
     <>
-      <h2 className="text-lg mb-5 font-bold">{titleText}</h2>
+      <h2 className="text-lg mb-5 ubuntu lowercase">
+        {titleText}
+      </h2>
       <ul>
         {itemList.map((item) => (
           <li key={item.id}>
             <span
               onClick={() => handleClick(item.id)}
-              className={`px-5 py-3 rounded-lg transition-all duration-200 ${
-                isChecked ? 'text-gray-600 line-through italic' : ''
+              className={`px-5 py-3 rounded-lg transition-all duration-200 ubuntu ${
+                isChecked
+                  ? 'text-gray-600 line-through italic'
+                  : ''
               } hover:scale-105 hover:bg-slate-300`}
             >
               <Checkbox
