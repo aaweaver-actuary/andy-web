@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 
-import LandingPage from './pages/Landing.page';
-import AboutPage from './pages/About.page';
-import BlogPage from './pages/Blog.page';
-import ProjectsPage from './pages/Projects.page';
-import ResumePage from './pages/Resume.page';
-import ContactPage from './pages/Contact.page';
+import LandingPage from './Landing.page';
+// import AboutPage from './pages/About.page';
+// import BlogPage from './pages/Blog.page';
+// import ProjectsPage from './pages/Projects.page';
+// import ResumePage from './pages/Resume.page';
+// import ContactPage from './pages/Contact.page';
 
 export default function Home() {
   const [isLandingPage, setIsLandingPage] = useState(true);
@@ -51,21 +51,6 @@ export default function Home() {
       />
 
       {/* depending on the toggled button, render a separate page */}
-      {canRenderNewPage && toggledButton === 0 && (
-        <AboutPage />
-      )}
-      {canRenderNewPage && toggledButton === 1 && (
-        <BlogPage />
-      )}
-      {canRenderNewPage && toggledButton === 2 && (
-        <ProjectsPage />
-      )}
-      {canRenderNewPage && toggledButton === 3 && (
-        <ResumePage />
-      )}
-      {canRenderNewPage && toggledButton === 4 && (
-        <ContactPage />
-      )}
     </main>
   );
 }

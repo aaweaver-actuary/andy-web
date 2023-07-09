@@ -1,27 +1,22 @@
 [
   {
-    "name": "About",
-    "link": "#about",
-    "id": 0
+    "name": ".about",
+    "link": "/about"
   },
   {
-    "name": "Blog",
-    "link": "#blog",
-    "id": 1
+    "name": ".blog",
+    "link": "/blog"
   },
   {
-    "name": "Projects",
-    "link": "#projects",
-    "id": 2
+    "name": ".projects",
+    "link": "/projects"
   },
   {
-    "name": "Resume",
-    "link": "#resume",
-    "id": 3
+    "name": ".resume",
+    "link": "/resume"
   },
   {
-    "name": "Contact",
-    "link": "#contact",
-    "id": 4
+    "name": ".contact",
+    "link": "/contact"
   }
 ]

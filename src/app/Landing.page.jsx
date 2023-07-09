@@ -1,7 +1,7 @@
 import propTypes from 'prop-types';
 
-import Header from '../components/Header/Header.component';
-import Nav from '../components/Nav/Nav.component';
+import Header from './components/Header/Header.component';
+import Nav from './components/Nav/Nav.component';
 import { useEffect, useState } from 'react';
 
 const LandingPage = ({

@@ -6,29 +6,24 @@
 @import url('./styles/animation.styles.css');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
   font-family: 'Ubuntu Mono', monospace;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ubuntu {
+  /* background-color: #d6dbdc */
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  background-color: white;
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
   font-family: 'Ubuntu Mono', monospace;
 }
 
