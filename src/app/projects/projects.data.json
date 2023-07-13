@@ -1,0 +1,21 @@
+{
+  "simple_react": [
+    {
+      "name": ".pokedex",
+      "url": "/projects/pokedex"
+    },
+    {
+      "name": ".shopping-list",
+      "url": "/projects/shopping-list"
+    },
+    {
+      "name": ".background-generator",
+      "url": "/projects/background-generator"
+    },
+    {
+      "name": ".monsters-rolodex",
+      "url": "/projects/monsters-rolodex"
+    }
+  ],
+  "complex_react": []
+}

@@ -1,9 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import Layout from '../components/Layout.component';
 import AccordionPart from '../components/AccordionPart.component';
 import ProjectItem from './components/ProjectItem.component';
+
+import projectsData from './projects.data';
 
 const ProjectsPage = () => {
   return (
@@ -15,14 +16,15 @@ const ProjectsPage = () => {
         <AccordionPart title=".react-projects">
           <AccordionPart title=".simple-react-projects">
             <ul>
-              <ProjectItem
-                project=".shopping-list"
-                link="/projects/shopping-list"
-              />
-              <ProjectItem
-                project=".background-generator"
-                link="/projects/background-generator"
-              />
+              {projectsData.simple_react.map(
+                (project, index) => (
+                  <ProjectItem
+                    key={index}
+                    project={project.name}
+                    link={project.url}
+                  />
+                ),
+              )}
             </ul>
           </AccordionPart>
           <AccordionPart title=".complex-react-projects"></AccordionPart>

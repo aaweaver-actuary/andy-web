@@ -14,8 +14,13 @@ const ConfirmDelete = ({
       onClose={() => setIsConfirmDeleteOpen(false)}
     >
       <Box className="bg-white p-10 rounded-md flex flex-col fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <h2 className="text-2xl font-bold mb-5">Are you sure?</h2>
-        <p>Do you want to delete {lookupNameFromId(itemToDelete)}?</p>
+        <h2 className="text-2xl font-bold mb-5">
+          Are you sure?
+        </h2>
+        <p>
+          Do you want to delete{' '}
+          {lookupNameFromId(itemToDelete)}?
+        </p>
         <div className="flex flex-row mt-5">
           <Button
             variant="contained"

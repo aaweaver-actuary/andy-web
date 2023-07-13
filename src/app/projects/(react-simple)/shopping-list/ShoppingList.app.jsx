@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
-import ShoppingList from '@/app/projects/shopping-list/components/ShoppingList.component';
-import ConfirmDelete from '@/app/projects/shopping-list/components/ConfirmDelete.modal';
+import ShoppingList from '@/app/projects/(react-simple)/shopping-list/components/ShoppingList.component';
+import ConfirmDelete from '@/app/projects/(react-simple)/shopping-list/components/ConfirmDelete.modal';
 
 const ShoppingListApp = () => {
   const [items, setItems] = useState([]); // all items

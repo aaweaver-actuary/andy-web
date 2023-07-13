@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ubuntu font */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+
+/* creepster font (monsters rolodex) */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* animation styles */
 @import url('./styles/animation.styles.css');
 
 :root {
@@ -11,19 +17,15 @@
 }
 
 .ubuntu {
-  /* background-color: #d6dbdc */
   font-family: 'Ubuntu Mono', monospace;
+}
+
+.creepster {
+  font-family: 'Creepster', cursive;
 }
 
 body {
   background-color: white;
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
   font-family: 'Ubuntu Mono', monospace;
 }
 

@@ -1,6 +1,10 @@
 import ItemList from './ItemList.generic';
 
-const CompletedItems = ({ completedItems, handleUncheck, handleDelete }) => {
+const CompletedItems = ({
+  completedItems,
+  handleUncheck,
+  handleDelete,
+}) => {
   return (
     <ItemList
       titleText="Completed Items"
