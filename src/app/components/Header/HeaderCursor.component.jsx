@@ -1,25 +1,10 @@
 import propTypes from 'prop-types';
-import { useEffect } from 'react';
 
-const HeaderCursor = ({
-  isCursorBlack,
-  isLandingPage,
-  setIsCursorBlack,
-}) => {
-  useEffect(() => {
-    if (!isLandingPage) {
-      setIsCursorBlack(true);
-    }
-  }, [isLandingPage]);
-
+const HeaderCursor = ({ isCursorBlack, isLandingPage }) => {
   return (
     <div
       id="header-cursor"
-      className={`${
-        isCursorBlack
-          ? 'bg-black'
-          : 'bg-[rgb(214, 219, 220)]'
-      }
+      className={`${isCursorBlack ? 'bg-black' : 'bg-[rgb(214, 219, 220)]'}
             ${
               isLandingPage
                 ? 'z-[100] w-[90px] h-[200px] mt-[-80px] return-home'

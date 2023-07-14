@@ -2,24 +2,14 @@ import propTypes from 'prop-types';
 
 import Header from './components/Header/Header.component';
 import Nav from './components/Nav/Nav.component';
-import { useEffect, useState } from 'react';
 
 const LandingPage = ({
   isLandingPage,
   isFirstRender,
   setIsLandingPage,
-  setIsFirstRender,
   toggledButton,
   setToggledButton,
 }) => {
-  // set isFirstRender to false after the first render, and first time
-  // isLandingPage changes
-  useEffect(() => {
-    if (isFirstRender && !isLandingPage) {
-      setIsFirstRender(false);
-    }
-  }, [isLandingPage]);
-
   return (
     <>
       <Header

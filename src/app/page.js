@@ -8,10 +8,7 @@ export default function Home() {
   const [isLandingPage, setIsLandingPage] = useState(true);
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [toggledButton, setToggledButton] = useState(null);
-  const [canRenderNewPage, setCanRenderNewPage] =
-    useState(false);
-
-  
+  const [canRenderNewPage, setCanRenderNewPage] = useState(false);
 
   // when toggledButton changes, scroll to the top of the page,
   // set isFirstRender to false, and wait 0.5 seconds before
@@ -33,7 +30,7 @@ export default function Home() {
       window.scrollTo(0, 0);
       setIsFirstRender(false);
     }
-  }, [toggledButton]);
+  }, [canRenderNewPage, toggledButton]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
