@@ -6,7 +6,16 @@ import ProjectItem from './components/ProjectItem.component';
 
 import projectsData from './projects.data';
 
+import useStore from '@/app/store.js';
+
 const ProjectsPage = () => {
+  const projectsExpanded = useStore(
+    (state) => state.projectsExpanded,
+  );
+  const setProjectsExpanded = useStore(
+    (state) => state.setProjectsExpanded,
+  );
+
   return (
     <Layout>
       <h2 className="text-3xl top-1 ubuntu px-7">

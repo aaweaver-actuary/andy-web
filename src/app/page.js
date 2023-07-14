@@ -3,11 +3,6 @@
 import { useState, useEffect } from 'react';
 
 import LandingPage from './Landing.page';
-// import AboutPage from './pages/About.page';
-// import BlogPage from './pages/Blog.page';
-// import ProjectsPage from './pages/Projects.page';
-// import ResumePage from './pages/Resume.page';
-// import ContactPage from './pages/Contact.page';
 
 export default function Home() {
   const [isLandingPage, setIsLandingPage] = useState(true);
@@ -15,6 +10,8 @@ export default function Home() {
   const [toggledButton, setToggledButton] = useState(null);
   const [canRenderNewPage, setCanRenderNewPage] =
     useState(false);
+
+  
 
   // when toggledButton changes, scroll to the top of the page,
   // set isFirstRender to false, and wait 0.5 seconds before
@@ -49,8 +46,6 @@ export default function Home() {
         setToggledButton={setToggledButton}
         setCanRenderNewPage={setCanRenderNewPage}
       />
-
-      {/* depending on the toggled button, render a separate page */}
     </main>
   );
 }
