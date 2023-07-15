@@ -52,12 +52,8 @@ const Header = ({
       >
         <h1
           id="header-name"
-          className={`text-[170px] justify-self-end ${
-            isLandingPage
-              ? isFirstRender
-                ? ''
-                : 'return-home'
-              : 'leave-home'
+          className={`lg:text-[170px] md:text-[120px] sm:text-[60px] justify-self-end ${
+            isLandingPage ? (isFirstRender ? '' : 'return-home') : 'leave-home'
           }`}
           onClick={() => handleHeaderClick()}
         >
@@ -73,9 +69,7 @@ const Header = ({
         <section
           id="subheader"
           className={`flex flex-row justify-center pl-2 pr-2 text-[20px] ${
-            isLandingPage
-              ? 'pre-fade-out fade-in'
-              : 'fade-out pre-fade-in'
+            isLandingPage ? 'pre-fade-out fade-in' : 'fade-out pre-fade-in'
           }'`}
         >
           <h2>.husband</h2>
