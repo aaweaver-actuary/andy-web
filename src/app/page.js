@@ -10,6 +10,10 @@ export default function Home() {
   const [toggledButton, setToggledButton] = useState(null);
   const [canRenderNewPage, setCanRenderNewPage] = useState(false);
 
+  useEffect(() => {
+    console.log(exerciseJS(arr));
+  }, []);
+
   // when toggledButton changes, scroll to the top of the page,
   // set isFirstRender to false, and wait 0.5 seconds before
   // rendering the new page
