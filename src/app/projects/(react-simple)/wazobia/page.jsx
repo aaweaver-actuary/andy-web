@@ -1,4 +1,4 @@
-import Layout from '@/app/components/Layout.component';
+import Layout from '../../../components/Layout.component';
 import Homepage from './demo/Homepage.demo';
 
 const WazobiaPage = () => {

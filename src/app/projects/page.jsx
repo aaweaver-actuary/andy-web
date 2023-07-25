@@ -3,7 +3,7 @@
 import Layout from '../components/Layout.component';
 import ProjectAccordion from './components/ProjectAccordion.component';
 
-import projectsData from '../../app/projects/projects.data.json';
+import { projectsData } from './projects.data.js';
 
 const ProjectsPage = () => {
   // const projectsExpanded = useStore(
