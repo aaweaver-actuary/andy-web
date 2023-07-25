@@ -1,10 +1,9 @@
 'use client';
 
 import Layout from '../components/Layout.component';
-import AccordionPart from '../components/AccordionPart.component';
 import ProjectAccordion from './components/ProjectAccordion.component';
 
-import projectsData from '@/app/projects/projects.data';
+import projectsData from '../../app/projects/projects.data.json';
 
 const ProjectsPage = () => {
   // const projectsExpanded = useStore(

@@ -1,4 +1,4 @@
-import AccordionPart from '@/app/components/AccordionPart.component';
+import AccordionPart from '../../../app/components/AccordionPart.component';
 import ProjectAccordionPart from './ProjectAccordionPart.component';
 
 const ProjectAccordion = ({ title, dataType, data }) => {

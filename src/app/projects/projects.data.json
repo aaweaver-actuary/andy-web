@@ -20,6 +20,10 @@
           "url": "/projects/monsters-rolodex"
         },
         {
+          "name": ".robofriends",
+          "url": "/projects/robofriends"
+        },
+        {
           "name": ".wazobia",
           "url": "/projects/wazobia"
         }
