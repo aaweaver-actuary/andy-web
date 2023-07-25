@@ -2,20 +2,18 @@
 
 import { useMemo, useState } from 'react';
 
-import Layout from '@/app/components/Layout.component';
+import Layout from '../../../components/Layout.component';
 import Dropdown from './components/Dropdown.component';
 import PopupInfo from './components/PopupInfo.component';
 
 import { gradientDirectionMap } from './js/gradientDirectionTailwindCSS';
-import Button from '@/app/components/Button.component';
+import Button from '../../../components/Button.component';
 
 const BackgroundGeneratorPage = () => {
   const [color1, setColor1] = useState('#00ff00');
   const [color2, setColor2] = useState('#ff0000');
-  const [gradientDirection, setGradientDirection] =
-    useState('bottom right');
-  const [isSnackbarOpen, setIsSnackbarOpen] =
-    useState(false);
+  const [gradientDirection, setGradientDirection] = useState('bottom right');
+  const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
 
   const bgGradient = useMemo(() => {
     return `linear-gradient(to ${gradientDirection}, ${color1}, ${color2})`;
@@ -51,9 +49,7 @@ const BackgroundGeneratorPage = () => {
     const randomIntegers = [];
 
     for (let i = 0; i < n; i++) {
-      randomIntegers.push(
-        Math.floor(Math.random() * (max - min + 1)) + min,
-      );
+      randomIntegers.push(Math.floor(Math.random() * (max - min + 1)) + min);
     }
 
     if (n === 1) return randomIntegers[0];
@@ -106,18 +102,15 @@ const BackgroundGeneratorPage = () => {
       String(intToHex(randColInt[10])) +
       String(intToHex(randColInt[11]));
 
-    const randomGradientDirection = Object.keys(
-      gradientDirectionMap,
-    )[getRandomIntegers(0, 7, 1)];
+    const randomGradientDirection =
+      Object.keys(gradientDirectionMap)[getRandomIntegers(0, 7, 1)];
     setColor1(randomColor1);
     setColor2(randomColor2);
     setGradientDirection(randomGradientDirection);
 
     let color1Input = document.getElementById('color1');
     let color2Input = document.getElementById('color2');
-    let gradientDirectionInput = document.getElementById(
-      'gradientDirection',
-    );
+    let gradientDirectionInput = document.getElementById('gradientDirection');
 
     color1Input.value = randomColor1;
     color2Input.value = randomColor2;
@@ -169,9 +162,7 @@ const BackgroundGeneratorPage = () => {
             label="Gradient Direction"
             name="gradientDirection"
             selected={'bottom right'}
-            onSelectedChange={(e) =>
-              handleChange(e, 'gradientDirection')
-            }
+            onSelectedChange={(e) => handleChange(e, 'gradientDirection')}
             options={gradientDirectionMap}
             value={gradientDirection}
           />
