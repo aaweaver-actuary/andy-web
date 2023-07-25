@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <main className={`flex flex-col w-[100%] h-[100%]`}>
+      <main className={`flex flex-col w-[100%] h-[100%] overflow-y-scroll`}>
         {children}
       </main>
     </div>

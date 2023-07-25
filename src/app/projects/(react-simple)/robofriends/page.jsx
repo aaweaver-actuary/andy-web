@@ -8,6 +8,7 @@ import Header from './components/Header.component';
 import RoboList from './components/RoboList.component';
 import RoboModal from './components/RoboModal.component';
 import { robots } from './data/robots';
+import Scroll from './components/Scroll.component';
 
 const RobofriendsPage = () => {
   const [query, setQuery] = useState('');
@@ -30,18 +31,20 @@ const RobofriendsPage = () => {
       <main className="flex flex-col items-center space-y-3 p-2 bg-gradient-to-tr from-green-400 to-blue-300 min-h-screen h-full">
         <Header />
         <Search query={query} setQuery={setQuery} />
-        <RoboList query={query} robots={robots} handleClick={handleClick} />
-        {isSelected(selectedRobot) && (
-          <RoboModal
-            id={selectedRobot}
-            name={robots[selectedRobot].name}
-            email={robots[selectedRobot].email}
-            description={robots[selectedRobot].description}
-            handleExit={handleExit}
-          >
-            <h1>A MODAL.</h1>
-          </RoboModal>
-        )}
+        <Scroll>
+          <RoboList query={query} robots={robots} handleClick={handleClick} />
+          {isSelected(selectedRobot) && (
+            <RoboModal
+              id={selectedRobot}
+              name={robots[selectedRobot].name}
+              email={robots[selectedRobot].email}
+              description={robots[selectedRobot].description}
+              handleExit={handleExit}
+            >
+              <h1>A MODAL.</h1>
+            </RoboModal>
+          )}
+        </Scroll>
       </main>
     </Layout>
   );
