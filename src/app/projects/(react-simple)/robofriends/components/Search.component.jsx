@@ -4,7 +4,7 @@ const Search = ({ query, setQuery }) => {
       <input
         type="search"
         placeholder="filter robots by name..."
-        className="border-black border-[1px] rounded-lg p-3 w-[300px] hover:scale-110 hover:shadow-xl transition-transform duration-300 ease-in-out lr-shake bg-blue-300"
+        className="border-black border-[1px] rounded-lg p-3 shadow-md w-[300px] hover:scale-110 hover:shadow-xl transition-transform duration-300 ease-in-out lr-shake bg-blue-300"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
