@@ -19,12 +19,7 @@ const RobofriendsPage = () => {
   const loadRobotUsers = () => {
     if (hasLoaded) return;
     const url = 'https://jsonplaceholder.typicode.com/users';
-    // let currentRobots = robots;
-    // let currentRoboIds = [];
-    // Object.keys(currentRobots).forEach((key) => {
-    //   currentRoboIds.push(currentRobots[key].id);
-    // });
-    // const maxCurrentRoboId = Math.max(...currentRoboIds);
+
     let newRobots = [];
     fetch(url)
       .then((response) => response.json())
@@ -46,22 +41,6 @@ const RobofriendsPage = () => {
       .then(() => setHasLoaded(true))
       .then(() => setRobots(newRobots))
       .catch((error) => console.log(error));
-
-    // Object.keys(response).forEach((key) => {
-    //   let tempRobo = {
-    //     id: response[key].id + maxCurrentRoboId,
-    //     name: response[key].name,
-    //     email: response[key].email,
-    //     description: response[key].company.catchPhrase,
-    //   };
-
-    //     currentRobots.push(tempRobo);
-    //   });
-    // });
-
-    // setHasLoaded(true);
-
-    // setRobots(newRobots);
   };
 
   useEffect(() => {
