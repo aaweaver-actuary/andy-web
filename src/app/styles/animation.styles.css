@@ -60,8 +60,7 @@ h2.fade-out {
 
 /** LANDING PAGE BUTTONS */
 .nav-not-landing {
-  animation: bottom-to-top 0.5s ease-in-out alternate
-    forwards;
+  animation: bottom-to-top 0.5s ease-in-out alternate forwards;
 }
 @keyframes bottom-to-top {
   0% {
@@ -73,8 +72,7 @@ h2.fade-out {
 }
 
 .nav-landing {
-  animation: top-to-bottom 0.5s ease-in-out alternate
-    forwards;
+  animation: top-to-bottom 0.5s ease-in-out alternate forwards;
 }
 
 @keyframes top-to-bottom {
@@ -83,5 +81,45 @@ h2.fade-out {
   }
   100% {
     translate: 0;
+  }
+}
+
+.lr-shake:active {
+  animation: lr-shake 0.5s ease-in-out;
+}
+
+@keyframes lr-shake {
+  0% {
+    rotate: 0;
+  }
+  10% {
+    rotate: 10deg;
+  }
+  20% {
+    rotate: -9deg;
+  }
+  30% {
+    rotate: 8deg;
+  }
+  40% {
+    rotate: -7deg;
+  }
+  50% {
+    rotate: 6deg;
+  }
+  60% {
+    rotate: -5deg;
+  }
+  70% {
+    rotate: 4deg;
+  }
+  80% {
+    rotate: -3deg;
+  }
+  90% {
+    rotate: 2deg;
+  }
+  100% {
+    rotate: 0;
   }
 }

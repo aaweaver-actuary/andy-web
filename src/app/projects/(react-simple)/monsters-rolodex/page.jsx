@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-import Layout from '@/app/components/Layout.component';
+import Layout from '../../../components/Layout.component';
 
 import CardList from './components/CardList.component';
 import Search from './components/Search.component';
@@ -11,12 +11,10 @@ import Header from './components/Header.component';
 const MonsterRolodexPage = () => {
   // initialize empty array of monsters
   const [monsters, setMonsters] = useState([]);
-  const [filteredMonsters, setFilteredMonsters] =
-    useState(monsters);
+  const [filteredMonsters, setFilteredMonsters] = useState(monsters);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const usersUrl =
-    'https://jsonplaceholder.typicode.com/users';
+  const usersUrl = 'https://jsonplaceholder.typicode.com/users';
 
   // fetch users from API
   useEffect(() => {
@@ -35,16 +33,14 @@ const MonsterRolodexPage = () => {
   useEffect(() => {
     setFilteredMonsters(
       monsters.filter((monster) => {
-        return monster.name
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase());
+        return monster.name.toLowerCase().includes(searchQuery.toLowerCase());
       }),
     );
   }, [monsters, searchQuery]);
 
   return (
     <Layout>
-      <page className="flex flex-col items-center justify-center">
+      <page className="flex flex-col items-center justify-center bg-gradient-to-br from-green-400 to-blue-600">
         <Header title="Monster Rolodex" />
         <Search
           placeholder="Search Monsters"

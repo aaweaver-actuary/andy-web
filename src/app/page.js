@@ -35,7 +35,14 @@ export default function Home() {
 
   return (
     <>
-      <Head></Head>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <main className="flex min-h-screen flex-col items-center justify-center p-24">
         <LandingPage
           isLandingPage={isLandingPage}

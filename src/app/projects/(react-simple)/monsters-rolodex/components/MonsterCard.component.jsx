@@ -13,10 +13,12 @@ const MonsterCard = ({ name, email }) => {
         height={180}
       />
 
-      <h2 className="font-bold text-xl mb-[10px]">
+      <h2 className="font-bold text-ellipsis hyphens-auto text-[14px] lg:text-[16px] xl:text-text-[19px]">
         {name}
       </h2>
-      <p>{email}</p>
+      <p className="text-ellipsis hyphens-auto text-[14px] lg:text-[16px] xl:text-text-[19px]">
+        {email}
+      </p>
     </div>
   );
 };
