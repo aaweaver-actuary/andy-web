@@ -2,15 +2,14 @@
 
 import { useState, useEffect } from 'react';
 
-import ShoppingList from '@/app/projects/(react-simple)/shopping-list/components/ShoppingList.component';
-import ConfirmDelete from '@/app/projects/(react-simple)/shopping-list/components/ConfirmDelete.modal';
+import ShoppingList from '../../../projects/(react-simple)/shopping-list/components/ShoppingList.component';
+import ConfirmDelete from '../../../projects/(react-simple)/shopping-list/components/ConfirmDelete.modal';
 
 const ShoppingListApp = () => {
   const [items, setItems] = useState([]); // all items
   const [activeItems, setActiveItems] = useState([]); // active items [dateCompleted === null]
   const [completedItems, setCompletedItems] = useState([]); // completed items
-  const [isConfirmDeleteOpen, setIsConfirmDeleteOpen] =
-    useState(false);
+  const [isConfirmDeleteOpen, setIsConfirmDeleteOpen] = useState(false);
   const [itemToDelete, setItemToDelete] = useState(null);
 
   useEffect(() => {
@@ -21,15 +20,11 @@ const ShoppingListApp = () => {
   }, []);
 
   useEffect(() => {
-    setActiveItems(
-      items.filter((item) => !item.dateCompleted),
-    );
-    setCompletedItems(
-      items.filter((item) => item.dateCompleted),
-    );
+    setActiveItems(items.filter((item) => !item.dateCompleted));
+    setCompletedItems(items.filter((item) => item.dateCompleted));
     items.sort((a, b) => a.dateCreated - b.dateCreated);
     localStorage.setItem('items', JSON.stringify(items));
-    console.log('items', items);
+    console.log('items', items); //test
   }, [items]);
 
   const handleDeleteClick = (id) => {
@@ -40,13 +35,9 @@ const ShoppingListApp = () => {
   const handleDelete = (id) => {
     const item = items.find((item) => item.id === id);
     if (item.dateCompleted) {
-      setCompletedItems(
-        completedItems.filter((item) => item.id !== id),
-      );
+      setCompletedItems(completedItems.filter((item) => item.id !== id));
     } else {
-      setActiveItems(
-        activeItems.filter((item) => item.id !== id),
-      );
+      setActiveItems(activeItems.filter((item) => item.id !== id));
     }
     setItems(items.filter((item) => item.id !== id));
   };
