@@ -1,4 +1,4 @@
-import Layout from '@/app/components/Layout.component';
+import Layout from '../../../../../components/Layout.component';
 import Login from './Login.demo';
 
 const LoginPage = () => {
