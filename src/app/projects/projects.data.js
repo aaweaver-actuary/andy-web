@@ -39,6 +39,17 @@ export const projectsData = {
       ],
     },
   },
+  '.learning-projects': {
+    '.promises': {
+      title: 'promises',
+      list: [
+        {
+          name: '.promises',
+          url: '/projects/promises',
+        },
+      ],
+    },
+  },
   '.typescript-projects': {
     '.simple-ts': {
       title: '.simple-ts',

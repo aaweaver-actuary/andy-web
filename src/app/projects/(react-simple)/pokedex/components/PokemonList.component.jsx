@@ -2,19 +2,13 @@ import PokemonCard from './PokemonCard.component';
 
 const PokemonList = ({ pokemons }) => {
   return (
-    <ul>
-      {pokemons.map((pokemon) => {
-        console.log('pokemon:', pokemon);
-        console.log('pokemon.name:', pokemon.name);
-        console.log(
-          'pokemon.sprites.front_default:',
-          pokemon.sprites.front_default,
-        );
-        let { name } = pokemon;
-        let { front_default } = pokemon.sprites;
+    <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg-grid-cols-4 auto-rows-auto gap-3 w-[85vw]">
+      {pokemons.map((poke, idx) => {
+        // const { name, height, weight, id, spriteURL } = poke;
+        // return <h2 key={idx}>{name}</h2>;
         return (
-          <li key={name}>
-            <PokemonCard name={name} img={front_default} />
+          <li key={idx}>
+            <PokemonCard pokemon={poke} />
           </li>
         );
       })}

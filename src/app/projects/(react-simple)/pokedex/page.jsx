@@ -1,29 +1,35 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 import Layout from '../../../components/Layout.component';
+import Scroll from '../../../components/Scroll.component';
+
 import Header from './components/Header.component';
 import Searchbar from './components/Searchbar.component';
 import PokemonList from './components/PokemonList.component';
 
+import fetchPokemon from './js/fetchPokemon';
+
+async function getPokemon() {
+  const pokemon = await fetchPokemon();
+  return pokemon;
+}
+
 const PokedexPage = () => {
-  const [pokemon, setPokemon] = useState([]);
-  const [filteredPokemon, setFilteredPokemon] = useState(pokemon);
+  const [filteredPokemon, setFilteredPokemon] = useState(null);
   const [query, setQuery] = useState('');
 
-  // get all pokemon on page load
-  useEffect(() => {}, []);
-
-  // memoize filtered pokemon
   useEffect(() => {
-    setFilteredPokemon(pokemon);
-  }, [pokemon]);
-  // const filteredPokemon = useMemo(() => {
-  //   return pokemon.filter((poke) => {
-  //     poke.name.toLowerCase().includes(query.toLowerCase());
-  //   });
-  // }, [pokemon, query]);
+    // get all pokemon on page load
+    (async () => {
+      const pokemon = await getPokemon();
+
+      // initial filtered state is all pokemon
+      setFilteredPokemon(pokemon);
+      console.log('pokemon:', pokemon);
+    })();
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -35,7 +41,12 @@ const PokedexPage = () => {
       <div className="flex flex-col items-center justify-center">
         <Header />
         <Searchbar handleSearch={handleSearch} setQuery={setQuery} />
-        <PokemonList pokemons={filteredPokemon} />
+
+        {filteredPokemon && (
+          <Scroll>
+            <PokemonList pokemons={filteredPokemon} />{' '}
+          </Scroll>
+        )}
       </div>
     </Layout>
   );

@@ -24,6 +24,11 @@ const ProjectsPage = () => {
           data={projectsData['.react-projects']}
         />
         <ProjectAccordion
+          title={'.learning-projects'}
+          dataType={['.promises']}
+          data={projectsData['.learning-projects']}
+        />
+        <ProjectAccordion
           title={'.typescript-projects'}
           dataType={['.simple-ts', '.complex-ts']}
           data={projectsData['.typescript-projects']}
