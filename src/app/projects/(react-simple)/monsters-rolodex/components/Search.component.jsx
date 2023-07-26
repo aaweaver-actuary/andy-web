@@ -5,7 +5,7 @@ const Search = ({ placeholder, handleQueryTyping }) => {
     <div>
       <input
         type="search"
-        className={`border-black border-[1px] rounded-lg mb-[50px] p-[10px] w-[150px] leading-[30px] hover:shadow-lg`}
+        className={`border-black border-[1px] rounded-lg mb-[50px] p-[10px] w-[250px] leading-[30px] hover:shadow-lg active:border-black`}
         placeholder={placeholder}
         onChange={handleQueryTyping}
       />

@@ -1,5 +1,5 @@
-import AccordionPart from '@/app/components/AccordionPart.component';
-import ProjectItem from '@/app/projects/components/ProjectItem.component';
+import AccordionPart from '../../../app/components/AccordionPart.component';
+import ProjectItem from '../../../app/projects/components/ProjectItem.component';
 
 const nullData = [];
 const ProjectAccordionPart = ({ title, data = nullData }) => {

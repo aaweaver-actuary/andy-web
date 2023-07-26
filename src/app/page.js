@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
 import LandingPage from './Landing.page';
@@ -9,10 +10,6 @@ export default function Home() {
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [toggledButton, setToggledButton] = useState(null);
   const [canRenderNewPage, setCanRenderNewPage] = useState(false);
-
-  useEffect(() => {
-    console.log(exerciseJS(arr));
-  }, []);
 
   // when toggledButton changes, scroll to the top of the page,
   // set isFirstRender to false, and wait 0.5 seconds before
@@ -37,16 +34,26 @@ export default function Home() {
   }, [canRenderNewPage, toggledButton]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <LandingPage
-        isLandingPage={isLandingPage}
-        setIsLandingPage={setIsLandingPage}
-        isFirstRender={isFirstRender}
-        setIsFirstRender={setIsFirstRender}
-        toggledButton={toggledButton}
-        setToggledButton={setToggledButton}
-        setCanRenderNewPage={setCanRenderNewPage}
-      />
-    </main>
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <main className="flex min-h-screen flex-col items-center justify-center p-24">
+        <LandingPage
+          isLandingPage={isLandingPage}
+          setIsLandingPage={setIsLandingPage}
+          isFirstRender={isFirstRender}
+          setIsFirstRender={setIsFirstRender}
+          toggledButton={toggledButton}
+          setToggledButton={setToggledButton}
+          setCanRenderNewPage={setCanRenderNewPage}
+        />
+      </main>
+    </>
   );
 }
