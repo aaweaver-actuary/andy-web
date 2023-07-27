@@ -36,12 +36,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+        <meta name="description" content="A simple landing page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center p-24">
         <LandingPage
