@@ -24,6 +24,7 @@ const ProjectsPage = () => {
             dataType={['.simple-react', '.complex-react']}
             data={projectsData['.react-projects']}
           />
+          {/*           
           <ProjectAccordion
             title={'.learning-projects'}
             dataType={['.promises']}
@@ -33,7 +34,7 @@ const ProjectsPage = () => {
             title={'.typescript-projects'}
             dataType={['.simple-ts', '.complex-ts']}
             data={projectsData['.typescript-projects']}
-          />
+          /> */}
         </div>
       </main>
     </Layout>
