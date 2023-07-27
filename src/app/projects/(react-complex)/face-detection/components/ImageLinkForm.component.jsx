@@ -16,7 +16,7 @@ const ImageLinkForm = () => {
       <div className="mt-2">
         <input
           type="text"
-          className="text-md p-2 w-[70vw] text-center border-gray-300 border-2 rounded-lg"
+          className="text-md p-2 w-[70vw] text-center border-gray-400 border-[1px] rounded-lg"
         />
         <Button
           className="text-md p-2 w-[30vw] text-center"

@@ -1,11 +1,8 @@
-// import { Button as MButton } from '@mui/material';
+import './button.styles.css';
 
 const Button = ({ text, onClick = () => null }) => {
   return (
-    <button
-      className={`lowercase text-md ubuntu z-[1000] rounded-xl text-black border-black border-2 mx-2 hover:bg-black hover:text-white`}
-      onClick={onClick}
-    >
+    <button className={`andy-button ubuntu`} onClick={onClick}>
       {text}
     </button>
   );

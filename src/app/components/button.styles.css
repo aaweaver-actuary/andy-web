@@ -1,0 +1,17 @@
+.andy-button {
+  /* lowercase text-md ubuntu z-[1000] rounded-xl text-black border-black border-[1px] mx-2 hover:bg-black hover:text-white */
+  text-transform: lowercase;
+  font-size: 1rem;
+  z-index: 1000;
+  border-radius: 0.75rem;
+  color: #000000;
+  border: 1px solid #000000;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.andy-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
