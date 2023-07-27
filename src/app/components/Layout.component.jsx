@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Button from './Button.component';
+import Scroll from './Scroll.component';
 
 const navItems = [
   { category: 'about', link: '/about' },
@@ -13,7 +14,7 @@ const navItems = [
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-[100vw] h-[100vh] flex flex-col mb-5">
+    <div className="w-[100vw] h-[100vh] flex flex-col mb-5 z-[10000]">
       <header className="flex flex-row pb-2 pt-4 border-b-black border-b-2 top-0 h-[75px] ">
         <Link href="/" className="flex flex-col">
           <span className="mx-5 text-4xl w-fit hover:bg-black hover:text-white hover:scale-105 transition-all duration-200">
@@ -32,8 +33,10 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <main className={`flex flex-col w-[100%] h-[100%] overflow-y-scroll`}>
-        {children}
+      <main
+        className={`flex flex-col w-[100%] h-[100%] overflow-y-scroll z-[5000]`}
+      >
+        <Scroll>{children}</Scroll>
       </main>
     </div>
   );

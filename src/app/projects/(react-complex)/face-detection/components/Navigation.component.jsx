@@ -1,4 +1,5 @@
 import Logo from './Logo.component';
+import Box from './Box.component';
 
 const Navigation = () => {
   return (
@@ -9,14 +10,16 @@ const Navigation = () => {
       `}
     >
       <Logo />
-      <p
-        className={`
-      text-black hover:text-slate-500
-      underline cursor-pointer p-3
-      `}
-      >
-        Sign Out
-      </p>
+      <Box style={{ height: 'fit-content' }}>
+        <p
+          className={`
+          text-black hover:text-slate-500
+          underline cursor-pointer p-1
+          `}
+        >
+          Sign Out
+        </p>
+      </Box>
     </nav>
   );
 };
