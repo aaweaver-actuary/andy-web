@@ -4,10 +4,8 @@ const Navigation = () => {
   return (
     <nav
       className={`
-      border-green-500 border-2
       flex justify-between my-5
-      w-[90vw] h-fit
-      bg-white bg-opacity-30
+      w-[90vw] h-fit absolute
       `}
     >
       <Logo />

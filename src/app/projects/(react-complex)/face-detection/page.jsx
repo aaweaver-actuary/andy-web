@@ -10,9 +10,11 @@ const FaceDetectionPage = () => {
     <Layout>
       <main className="h-full w-full flex flex-col items-center bg-gradient-to-br from-purple-300 to to-blue-400">
         <Navigation />
-        <UserRank />
-        <ImageLinkForm />
-        <FaceRecognition />
+        <section className="flex flex-col pt-10 items-center justify-center">
+          <UserRank />
+          <ImageLinkForm />
+          <FaceRecognition />
+        </section>
       </main>
     </Layout>
   );
