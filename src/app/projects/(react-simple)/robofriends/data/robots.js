@@ -3,60 +3,140 @@ export const robots = [
     id: 1,
     name: 'Leanne Graham',
     username: 'Bret',
-    email: 'Sincere@april.biz'
+    email: 'Sincere@april.biz',
+    description: 'Likes to code.',
   },
   {
     id: 2,
     name: 'Ervin Howell',
     username: 'Antonette',
-    email: 'Shanna@melissa.tv'
+    email: 'Shanna@melissa.tv',
+    description: 'Favorite oil is synthetic.',
   },
   {
     id: 3,
     name: 'Clementine Bauch',
     username: 'Samantha',
-    email: 'Nathan@yesenia.net'
+    email: 'Nathan@yesenia.net',
+    description: 'Fun-loving and adventurous.',
   },
   {
     id: 4,
     name: 'Patricia Lebsack',
     username: 'Karianne',
-    email: 'Julianne.OConner@kory.org'
+    email: 'Julianne.OConner@kory.org',
+    description: 'Enjoys logic puzzles.',
   },
   {
     id: 5,
     name: 'Chelsey Dietrich',
     username: 'Kamren',
-    email: 'Lucio_Hettinger@annie.ca'
+    email: 'Lucio_Hettinger@annie.ca',
+    description: 'Loves designing new algorithms.',
   },
   {
     id: 6,
     name: 'Mrs. Dennis Schulist',
     username: 'Leopoldo_Corkery',
-    email: 'Karley_Dach@jasper.info'
+    email: 'Karley_Dach@jasper.info',
+    description: 'Skilled in cloud computing.',
   },
   {
     id: 7,
     name: 'Kurtis Weissnat',
     username: 'Elwyn.Skiles',
-    email: 'Telly.Hoeger@billy.biz'
+    email: 'Telly.Hoeger@billy.biz',
+    description: 'Fan of digital art.',
   },
   {
     id: 8,
     name: 'Nicholas Runolfsdottir V',
     username: 'Maxime_Nienow',
-    email: 'Sherwood@rosamond.me'
+    email: 'Sherwood@rosamond.me',
+    description: 'Passionate about cyber security.',
   },
   {
     id: 9,
     name: 'Glenna Reichert',
     username: 'Delphine',
-    email: 'Chaim_McDermott@dana.io'
+    email: 'Chaim_McDermott@dana.io',
+    description: 'Solving complex problems for fun.',
   },
   {
     id: 10,
     name: 'Clementina DuBuque',
     username: 'Moriah.Stanton',
-    email: 'Rey.Padberg@karina.biz'
-  }
+    email: 'Rey.Padberg@karina.biz',
+    description: 'Enjoys building neural networks.',
+  },
+  {
+    id: 11,
+    name: 'Alvina Algorithm',
+    username: 'BinaryBabe',
+    email: 'Alvina@algorithm.io',
+    description: 'Consistently loops over breakfast.',
+  },
+  {
+    id: 12,
+    name: 'Reggie Recursion',
+    username: 'RecursiveReggie',
+    email: 'Reggie@recursion.net',
+    description: 'He’s got functions in functions.',
+  },
+  {
+    id: 13,
+    name: 'Bobby Boolean',
+    username: 'BooleanBobby',
+    email: 'Bobby@boolean.biz',
+    description: "He’s either on or off, there's no in-between.",
+  },
+  {
+    id: 14,
+    name: 'Quincy Quantum',
+    username: 'QuantumQuincy',
+    email: 'Quincy@quantum.com',
+    description: 'Exists in multiple states until observed.',
+  },
+  {
+    id: 15,
+    name: 'Cassy Compiler',
+    username: 'CompilerCassy',
+    email: 'Cassy@compiler.co',
+    description: 'Always translating for her friends.',
+  },
+  {
+    id: 16,
+    name: 'Pippa Pixel',
+    username: 'PixelPippa',
+    email: 'Pippa@pixel.pics',
+    description: 'More colorful than the average bot.',
+  },
+  {
+    id: 17,
+    name: 'Andy Algorithm',
+    username: 'AndyTheAlgo',
+    email: 'Andy@algorithm.ai',
+    description: 'Loves sorting things out in his free time.',
+  },
+  {
+    id: 18,
+    name: 'Terry Terabyte',
+    username: 'TerabyteTerry',
+    email: 'Terry@terabyte.tech',
+    description: 'Never forgets a thing.',
+  },
+  {
+    id: 19,
+    name: 'Franny Firewall',
+    username: 'FirewallFranny',
+    email: 'Franny@firewall.ff',
+    description: "Keeps everyone at arm's length.",
+  },
+  {
+    id: 20,
+    name: 'Daisy Debug',
+    username: 'DebugDaisy',
+    email: 'Daisy@debug.db',
+    description: 'She’s got all the solutions.',
+  },
 ];
