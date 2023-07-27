@@ -3,7 +3,7 @@
 const Button = ({ text, onClick = () => null }) => {
   return (
     <button
-      className={`lowercase text-md ubuntu z-[1000] rounded-xl text-black border-black border-[2px] mx-2 hover:bg-black hover:text-white`}
+      className={`lowercase text-md ubuntu z-[1000] rounded-xl text-black border-black border-2 mx-2 hover:bg-black hover:text-white`}
       onClick={onClick}
     >
       {text}
