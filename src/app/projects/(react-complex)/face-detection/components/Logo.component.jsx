@@ -8,9 +8,11 @@ const Logo = () => {
     <Tilt>
       <div
         className={`
-        rounded-lg shadow-lg border-2 border-gray-400
+        rounded-lg shadow-lg
+        ${/*border-2 border-gray-400*/ ''}
         h-[150px] w-[150px]
         p-2 mt-0
+        bg-gradient-to-br from-purple-400 to to-blue-400 bg-opacity-30
       `}
       >
         <Image

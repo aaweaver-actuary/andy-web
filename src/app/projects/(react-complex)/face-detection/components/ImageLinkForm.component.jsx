@@ -6,7 +6,7 @@ const ImageLinkForm = () => {
   return (
     <div
       className={`
-      border-blue-500 border-2 bg-white bg-opacity-30
+      bg-white bg-opacity-30 rounded-lg
         my-3 p-3
         `}
     >
