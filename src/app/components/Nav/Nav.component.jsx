@@ -25,6 +25,7 @@ const Nav = ({
           <Button
             key={`button-${index}`}
             text={navItem.name}
+            // onClick={() => handleClickedButton(navItem.id)}
           />
         </Link>
       ))}
