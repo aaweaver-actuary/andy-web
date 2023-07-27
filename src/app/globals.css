@@ -67,3 +67,18 @@ button.nav-toggled {
   background-color: black;
   color: rgb(var(--background-start-rgb));
 }
+
+.circles-bg {
+  background-color: #f9de5d;
+  opacity: 0.5;
+  background-image: radial-gradient(circle at center center, #f3a007, #f9de5d),
+    repeating-radial-gradient(
+      circle at center center,
+      #f3a007,
+      #f3a007,
+      25px,
+      transparent 50px,
+      transparent 25px
+    );
+  background-blend-mode: multiply;
+}

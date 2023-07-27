@@ -2,14 +2,11 @@
 
 import Button from '../../../../components/Button.component';
 
+import Box from './Box.component';
+
 const ImageLinkForm = () => {
   return (
-    <div
-      className={`
-      bg-white bg-opacity-30 rounded-lg
-        my-3 p-3
-        `}
-    >
+    <Box>
       <p className="text-sm">
         {'This Magic Brain will detect faces in your pictures. Give it a try!'}
       </p>
@@ -26,7 +23,7 @@ const ImageLinkForm = () => {
           }}
         />
       </div>
-    </div>
+    </Box>
   );
 };
 
