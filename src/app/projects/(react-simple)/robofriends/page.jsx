@@ -7,12 +7,16 @@ import Search from './components//Search.component';
 import Header from './components/Header.component';
 import RoboList from './components/RoboList.component';
 import RoboModal from './components/RoboModal.component';
-import { robotList } from './data/robots';
 import Scroll from './components/Scroll.component';
+import ErrorHandler from './components/ErrorHandler.component';
+
+import { ErrorBoundary } from 'react-error-boundary';
+
+import { robotList } from './data/robots';
 
 const RobofriendsPage = () => {
   const [query, setQuery] = useState('');
-  const [selectedRobot, setSelectedRobot] = useState(null);
+  const [selectedRobot, setSelectedRobot] = useState(-1);
   const [hasLoaded, setHasLoaded] = useState(false);
   const [robots, setRobots] = useState(robotList);
 
@@ -24,7 +28,7 @@ const RobofriendsPage = () => {
     fetch(url)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         newRobots = [...robots];
         let maxCurrentRoboId = Math.max(...newRobots.map((robo) => robo.id));
 
@@ -47,42 +51,34 @@ const RobofriendsPage = () => {
     loadRobotUsers();
   }, []);
 
-  useEffect(() => {
-    console.log('robots: ', robots);
-  }, [robots]);
-
-  const isSelected = (selectedRobot) => {
-    return selectedRobot ? true : false;
-  };
-
   const handleClick = (id) => {
-    setSelectedRobot(id);
+    setSelectedRobot(id - 1);
   };
 
   const handleExit = () => {
-    setSelectedRobot(null);
+    setSelectedRobot(-1);
   };
 
   return (
     <Layout>
-      <main className="flex flex-col items-center space-y-3 p-2 bg-gradient-to-tr from-green-400 to-blue-300 min-h-screen h-full">
-        <Header />
-        <Search query={query} setQuery={setQuery} />
-        <Scroll>
-          <RoboList query={query} robots={robots} handleClick={handleClick} />
-          {isSelected(selectedRobot) && (
-            <RoboModal
-              id={selectedRobot}
-              name={robots[selectedRobot].name}
-              email={robots[selectedRobot].email}
-              description={robots[selectedRobot].description}
-              handleExit={handleExit}
-            >
-              <h1>A MODAL.</h1>
-            </RoboModal>
-          )}
-        </Scroll>
-      </main>
+      <ErrorBoundary FallbackComponent={ErrorHandler}>
+        <main className="flex flex-col items-center space-y-3 p-2 bg-gradient-to-tr from-green-400 to-blue-300 min-h-screen h-full">
+          <Header />
+          <Search query={query} setQuery={setQuery} />
+          <Scroll>
+            <RoboList query={query} robots={robots} handleClick={handleClick} />
+            {selectedRobot >= 0 && (
+              <RoboModal
+                id={robots[selectedRobot].id}
+                name={robots[selectedRobot].name}
+                email={robots[selectedRobot].email}
+                description={robots[selectedRobot].description}
+                handleExit={handleExit}
+              ></RoboModal>
+            )}
+          </Scroll>
+        </main>
+      </ErrorBoundary>
     </Layout>
   );
 };
