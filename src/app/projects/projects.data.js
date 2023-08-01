@@ -33,8 +33,8 @@ export const projectsData = {
       title: '.complex-react',
       list: [
         {
-          name: '',
-          url: '',
+          name: '.face-detection',
+          url: '/projects/face-detection',
         },
       ],
     },
