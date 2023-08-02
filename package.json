@@ -45,10 +45,16 @@
     "react-dom": "18.2.0",
     "react-error-boundary": "^4.0.10",
     "react-parallax-tilt": "^1.7.155",
+    "react-particles": "^2.11.0",
     "react-syntax-highlighter": "^15.5.0",
     "tailwindcss": "3.3.2",
     "ts-node": "^10.9.1",
+    "tsparticles-engine": "^2.11.1",
+    "tsparticles-slim": "^2.11.1",
     "typescript": "^5.1.6",
     "zustand": "^4.3.9"
+  },
+  "devDependencies": {
+    "tsparticles-demo-configs": "^2.11.1"
   }
 }

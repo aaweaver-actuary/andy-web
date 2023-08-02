@@ -1,13 +1,17 @@
-const UserRank = ({ name, entries }) => {
+import Box from './Box.component';
+
+const UserRank = ({ name = 'Andy', rank = 1 }) => {
   return (
-    <div
-      className={`
-    border-purple-500 border-2 bg-white bg-opacity-30
-      p-3
-    `}
+    <Box
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignContent: 'center',
+      }}
     >
-      <h2>Your user rank is #1!!!</h2>
-    </div>
+      <h2 className="ubuntu text-lg w-full text-center">{`${name}, your current rank is...`}</h2>
+      <h3 className="ubuntu text-2xl font-bold w-full text-center">{`#${rank}`}</h3>
+    </Box>
   );
 };
 
