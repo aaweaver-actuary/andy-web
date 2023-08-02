@@ -1,18 +1,24 @@
 'use client';
 
 import Tilt from 'react-parallax-tilt';
+import Image from 'next/image';
 
 const Logo = () => {
   return (
     <Tilt>
       <div
         className={`
-    border-black border-2 bg-black bg-opacity-20
-      h-[150px] w-[150px]
-      p-2 mt-0
+        rounded-lg shadow-lg border-2 border-gray-400
+        h-[150px] w-[150px]
+        p-2 mt-0
       `}
       >
-        I AM A LOGO
+        <Image
+          src="/brain-assets/brain-icon.svg"
+          alt="brain icon (unloaded :( )"
+          width={150}
+          height={150}
+        />
       </div>
     </Tilt>
   );
