@@ -39,6 +39,35 @@ export const projectsData = {
       ],
     },
   },
+  '.data-projects': {
+    '.regression': {
+      title: '.regression',
+      list: [
+        {
+          name: '.project-name',
+          url: '/projects/regression-project-name',
+        },
+      ],
+    },
+    '.classification': {
+      title: '.classification',
+      list: [
+        {
+          name: '.project-name',
+          url: '/projects/classification-project-name',
+        },
+      ],
+    },
+    '.transfer-learning': {
+      title: '.transfer-learning',
+      list: [
+        {
+          name: '.project-name',
+          url: '/projects/transfer-project-name',
+        },
+      ],
+    },
+  },
   '.learning-projects': {
     '.promises': {
       title: 'promises',

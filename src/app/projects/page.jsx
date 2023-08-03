@@ -15,7 +15,7 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <main className="h-full w-[90%] flex flex-col items-center">
+      <main className="h-full w-full md:w-[90%] flex flex-col items-center">
         <h2 className="text-3xl top-1 ubuntu px-7">.projects</h2>
 
         <div className="w-[vw100] grid grid-flow-row lg:grid-cols-3 mt-3">
@@ -23,6 +23,11 @@ const ProjectsPage = () => {
             title={'.react-projects'}
             dataType={['.simple-react', '.complex-react']}
             data={projectsData['.react-projects']}
+          />
+          <ProjectAccordion
+            title={'.data-projects'}
+            dataType={['.regression', '.classification', '.transfer-learning']}
+            data={projectsData['.data-projects']}
           />
           {/*           
           <ProjectAccordion
